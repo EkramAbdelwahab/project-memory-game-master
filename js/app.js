@@ -25,15 +25,14 @@ var deck = ["fa-diamond", "fa-diamond", "fa-paper-plane-o", "fa-paper-plane-o", 
 var open = [];
 var matched = 0;
 var moveCounter = 0;
-var numStars = 5;
+var numStars = 3;
 var timer = {
     seconds: 0,
     minutes: 0,
     clearTime: -1
 };
-var low = 15; 
-var medium = 20;
-var hard = 30;
+var medium = 15;
+var hard = 20;
 
 
 var modal = $("#win");
@@ -103,7 +102,7 @@ function resetStars() {
 function updateMoveCounter() {
     $(".moves").text(moveCounter);
 
-    if (moveCounter === hard || moveCounter === medium || moveCounter === low) {
+    if (moveCounter === hard || moveCounter === medium) {
         removeStar();
     }
 };
